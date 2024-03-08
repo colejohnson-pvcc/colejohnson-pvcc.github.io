@@ -24,11 +24,29 @@ total = 0
 
 ##############  define program functions ##############
 def main():
-        x = 1
-        while True:
+
+    more_meals = True
+
+    while more_meals:
+        get_user_data()
+        perform_calculations()
+        display_results()
+
+        yesno = input("\nWould you like to order again (Y or N)? ")
+        if yesno == "N" or yesno =="n":
+            more_meals = False
+            print("Thank you for your order. Enjoy your meal!")
+            
+            while True:
                 get_user_data()
                 perform_calculations()
                 display_results()
+                
+                yesno = input("\nWould you like to order again (Y or N)? ")
+                if yesno == "N" or yesno =="n":
+                        more_meals = False
+                        print("Thank you for your order. Enjoy your meal!")
+
         
 def get_user_data():
     global num_adult_meals
