@@ -24,10 +24,12 @@ total = 0
 
 ##############  define program functions ##############
 def main():
-    get_user_data()
-    perform_calculations()
-    display_results()
-            
+        x = 1
+        while True:
+                get_user_data()
+                perform_calculations()
+                display_results()
+        
 def get_user_data():
     global num_adult_meals
     num_adult_meals = int(input("Number of adult meals: "))
@@ -53,6 +55,7 @@ def display_results():
     print('Total        $ ' + format(total,'8,.2f'))
     print('------------------------------')
     print(str(datetime.datetime.now()))
+
 
 ##########  call on main program to execute ##########
 main()
