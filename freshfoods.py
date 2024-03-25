@@ -127,8 +127,8 @@ def display_results():
         data2 = "   " + format(fed_tax[i], currency) + "         " + format(state_tax[i], currency) + "     " + format(soc_sec[i], currency) + format(medicare[i], currency) + "     " + format(net_pay[i], currency)
         print(data1 + data2)
     print(line)
-    print("******************** Total Gross: $" + format(total_gross, currency))
-    print("******************** Total NET  : $" + format(total_net, currency))
+    print("******************** TOTAL GROSS: $" + format(total_gross, currency))
+    print("******************** TOTAL NET  : $" + format(total_net, currency))
     print(line)
     
 ##########  call on main program to execute ############
