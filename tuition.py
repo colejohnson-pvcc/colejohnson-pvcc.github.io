@@ -45,7 +45,7 @@ def get_user_data():
     scholarshipamt = float(input("Scholarship amount received: "))
 
 def perform_calculations():
-    global tuition, cap_fee, inst_fee, act_fee, total, balance
+    global tuition, inst_fee, cap_fee, act_fee, total, balance
     
     if inout == 1:
         tuition = numcredits * RATE_TUITION_IN
