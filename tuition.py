@@ -54,7 +54,6 @@ def perform_calculations():
         tuition = numcredits * RATE_TUITION_OUT
         cap_fee = numcredits * RATE_CAPITAL_FEE
 
-    inst_fee = RATE_INSTITUTION_FEE
     inst_fee = numcredits * RATE_INSTITUTION_FEE
     act_fee = numcredits * RATE_ACTIVITY_FEE
     total = tuition + cap_fee + inst_fee + act_fee
