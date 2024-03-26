@@ -13,7 +13,7 @@ RATE_ACTIVITY_FEE = 2.90
 #define global variables
 inout = 1  # 1 means in-state, 2 means out-of-state
 numcredits = 0
-scholarshipamt = 0
+scholarship_amt = 0
 
 tuition_amt = 0
 inst_fee = 0
@@ -38,11 +38,11 @@ def main():
             print("Thank you for enrolling at PVCC. Enjoy the semester!")
 
 def get_user_data():
-    global inout, numcredits, scholarshipamt
+    global inout, numcredits, scholarship_amt
     print('**** PIEDMONT VIRGINIA COMM COLLEGE Tuition & Fees ****')
     inout = int(input("Enter a 1 for IN-STATE; enter a 2 for OUT-OF-STATE: "))
     numcredits = int(input("Number of credits registered for: "))
-    scholarshipamt = float(input("Scholarship amount received: "))
+    scholarship_amt = float(input("Scholarship amount received: "))
 
 def perform_calculations():
     global tuition, inst_fee, cap_fee, act_fee, total, balance
@@ -57,7 +57,7 @@ def perform_calculations():
     inst_fee = RATE_INSTITUTION_FEE
     act_fee = numcredits * RATE_ACTIVITY_FEE
     total = tuition + cap_fee + inst_fee + act_fee
-    balance = total - scholarshipamt
+    balance = total - scholarship_amt
     
 def display_results():
     currency = '8,.2f'
@@ -73,7 +73,7 @@ def display_results():
     print('Institution Fee  $ ' + format(inst_fee, currency))
     print('Activity Fee     $ ' + format(act_fee, currency))
     print('Total            $ ' + format(total, currency))
-    print('Scholarship      $ ' + format(scholarshipamt, currency))
+    print('Scholarship      $ ' + format(scholarship_amt, currency))
     print('Balance          $ ' + format(balance, currency))
     print('------------------------------')
 
