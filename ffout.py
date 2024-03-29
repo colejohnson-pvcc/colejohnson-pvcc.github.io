@@ -126,8 +126,8 @@ def create_output_file():
 
  #STUDENTS: Create the missing code to f.write out employee data, one line at a time
     for i in range(num_emps):
-        data1 = "\n" + emp[i] + "  " + job[i] + format(gross_pay[i], currency)        
-        data2 = "    " + format(fed_tax[i], currency) + "         " + format(state_tax[i], currency) + "     " + format(soc_sec[i], currency) + format(medicare[i], currency) + "     " + format(net_pay[i], currency)
+        data1 = "\n" + emp[i] + "  " + job[i] + " " + format(gross_pay[i], currency)        
+        data2 = "   " + format(fed_tax[i], currency) + "         " + format(state_tax[i], currency) + "     " + format(soc_sec[i], currency) + format(medicare[i], currency) + "     " + format(net_pay[i], currency)
         f.write(data1 + data2)
     f.write(line)
     f.write("\n******************** TOTAL GROSS: $" + format(total_gross, currency))
