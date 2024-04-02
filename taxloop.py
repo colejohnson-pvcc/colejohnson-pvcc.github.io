@@ -13,7 +13,7 @@ import datetime
 
 ################# define global variables #################
 # define tax rate, service fee, and prices
-PPT_RATE = .021
+PPT_RATE = .042
 RELIEF_RATE = .33
 
 # define global variables
@@ -49,11 +49,11 @@ def get_user_data():
 def perform_calculations():
     global tax_due, PPTR, total
     if eligible == "y" or eligible == "Y":
-        tax_due = vehicle_value * PPT_RATE
+        tax_due = vehicle_value * PPT_RATE/2
         PPTR = tax_due * RELIEF_RATE
         total = tax_due - PPTR
     if eligible == "n" or eligible == "N":
-        tax_due = vehicle_value * PPT_RATE
+        tax_due = vehicle_value * PPT_RATE/2
         PPTR = 0
         total = tax_due
 
@@ -77,5 +77,3 @@ def display_results():
 
 
 main()
-  
-    
