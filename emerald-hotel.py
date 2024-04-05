@@ -88,7 +88,7 @@ def create_output_html():
     colsp = '<tr><td colspan= "8">'
 
  #STUDENTS: INSERT ALL THE MISSING f.write STATEMENTS HERE
-    f.write('\n<table border="3"   style ="background-color: #51bedf;  font-family: arial; margin: auto;">\n')            
+    f.write('\n<table border="3"   style ="background-color: #51bedf;  font-family: Cambria; margin: auto;">\n')            
     f.write(colsp + '\n')
     f.write('<h2 style = "text-align: center; padding-top: 20px"> Emerald Beach Hotel & Resort Guest Report </h2></tr>')
     f.write(colsp + '\n')
@@ -106,7 +106,10 @@ def create_output_html():
             
             else:
                 subtotal = ROOM_RATES[2] * num_nights
-
+                
+            salestax  = subtotal * TAX_RATES[0]
+            occupancy = subtotal * TAX_RATES[1]
+            total     = subtotal + salestax + occupancy
             
             data1 = guest[i][0] + "\t" + td + guest[i][1]+ "" + td + guest[i][2] + "\t" + td + guest[i][3] + "\t" + td + format(subtotal,currency) + td + format(salestax,currency) + td + format(occupancy,currency) + td + format(total,currency) + endtr
             f.write(tr + data1 + endtr)
